@@ -289,11 +289,11 @@ public class LoadFormController implements Initializable {
             // Save the changes to the current file
             FieldService.writeFieldsToFile(currentFile.getAbsolutePath(), storedResponse.getFields(), lengthOriginal);
 
-            // TODO: Perform the following:
+            // TODO [1]: Perform the following:
             // 1) Update the fields of the excel (.xlsx) file corresponding to the current file,
-            // 2) If it doesn't exist yet, create an additional excel (.xlsx) file containing the original
+            // 2) If the additional output file doesn't exist yet, create an additional excel (.xlsx) file containing the original
             //      preset fields + the custom fields added (if the current file was made from a preset form)
-            //    Else, update that file's fields
+            //    If it already exists, update that file's fields
 
             // Show success dialog
             AlertController.showAlert(
@@ -477,7 +477,8 @@ public class LoadFormController implements Initializable {
             answerIndex++;
         }
 
-        // TODO: Save response into the associated excel (.xlsx) file (or files, if preset form was used) of the current file.
+        // TODO [2]:
+        // Save response into the associated excel (.xlsx) file (or files, if preset form was used) of the current file.
 
         // Show save success message
         AlertController.showAlert(

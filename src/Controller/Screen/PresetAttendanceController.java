@@ -229,7 +229,7 @@ public class PresetAttendanceController implements Initializable {
                 // Save an ARW questions (.arwq) file containing the format of the questions
                 FieldService.writeFieldsToFile(file.getAbsolutePath(), storedResponse.getFields(), lengthOriginal);
 
-                // TODO: Save an excel (.xlsx) file containing:
+                // TODO [5]: Save an excel (.xlsx) file containing:
                 // 1) The original Attendance fields,
                 // 2) The original Attendance fields + the custom fields added by the user (if any)
 

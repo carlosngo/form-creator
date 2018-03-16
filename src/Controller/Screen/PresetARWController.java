@@ -232,7 +232,7 @@ public class PresetARWController implements Initializable {
                 // Save an ARW questions (.arwq) file containing the format of the questions
                 FieldService.writeFieldsToFile(file.getAbsolutePath(), storedResponse.getFields(), lengthOriginal);
 
-                // TODO: Save an excel (.xlsx) file containing:
+                // TODO [4]: Save an excel (.xlsx) file containing:
                 // 1) The original ARW fields,
                 // 2) The original ARW fields + the custom fields added by the user (if any)
 

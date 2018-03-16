@@ -217,7 +217,7 @@ public class NewFormController implements Initializable {
                 // Save an ARW questions (.arwq) file containing the format of the questions
                 FieldService.writeFieldsToFile(file.getAbsolutePath(), storedResponse.getFields(), 0);
 
-                // TODO: Save an excel (.xlsx) file containing the custom fields made by the user
+                // TODO [3]: Save an excel (.xlsx) file containing the custom fields made by the user
 
                 // Show success dialog
                 AlertController.showAlert(
