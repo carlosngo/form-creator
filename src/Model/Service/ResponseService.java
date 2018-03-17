@@ -5,6 +5,8 @@
  */
 package Model.Service;
 
+import Model.Core.Field;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -13,7 +15,6 @@ import java.io.IOException;
 import java.sql.RowIdLifetime;
 import java.util.ArrayList;
 
-import Model.Core.Field;
 import Model.Core.Response;
 import static Model.Service.FieldService.readFieldsFromFile;
 
