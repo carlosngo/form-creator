@@ -3,9 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Model.Service;
+package Model;
 
-import java.io.File;
+/**
+ *
+ * @author Carlos
+ */
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+import static Model.FieldService.*;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFFont;
@@ -13,7 +23,6 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.apache.poi.ss.usermodel.*;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,7 +31,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.RowIdLifetime;
 import java.util.ArrayList;
-import Model.Core.Response;
 
 /**
  *
@@ -133,7 +141,7 @@ public class ResponseService {
 
 			fileOut.close();
 			wb.close();
-		} catch (InvalidFormatException | IOException ex) {
+		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
 
@@ -146,7 +154,7 @@ public class ResponseService {
 		boolean status = true;
 
 		try {
-			FileInputStream fileIn = new FileInputStream(file);
+			FileInputStream fileIn = new FileInputStream(outputFile);
 
 			XSSFWorkbook workbook = new XSSFWorkbook(fileIn);
 			XSSFSheet sheet = (XSSFSheet) workbook.getSheetAt(0);
@@ -172,7 +180,7 @@ public class ResponseService {
 
 			workbook.close();
 			outputStream.close();
-		} catch (InvalidFormatException | IOException ex) {
+		} catch (IOException ex) {
 			// The file provided does not exist or is of a different type!
 			ex.printStackTrace();
 		}            
